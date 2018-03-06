@@ -31,7 +31,7 @@ ATENÇÃO
 
 ---------------------
 
-Caso, você pense em criar o projeto a partir do sistema de tour do sonarqube, basta você ir o icone ( ? ) ao lado da barra de busca, clicar na opção Tutoriais e em **Analyze a new project**
+Caso, você pense em criar o projeto a partir do sistema de tour do sonarqube, basta você ir no icone ( ? ) ao lado da barra de busca, clicar na opção **Tutoriais** e em **Analyze a new project**
 
 
 Configuração inicial
@@ -45,10 +45,11 @@ docker-compose up
 ```
 Aguarde o docker baixar as imagens e toda configurar ser feita, esse processo, poderá demorar em torno de 3 à 7 minutos.
 
-Para acessar o sistema, após o sistema iniciar, acesse: **localhost:9000**
+Para acessar o sistema, após a inicialização do sistema, acesse: **localhost:9000**
 
-Login: admin
-Senha: admin123
+**Login:** admin
+
+**Senha:** admin
 
 Documentação
 ----------------------
@@ -85,9 +86,10 @@ No terminal execute o código abaixo:
 
 Para analisar os códigos distintos ao de cima, basta fazer o download do sonarqube scanner. Para Linux, acesse [link](https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778-linux.zip).
 
-Descompacte o arquivo, por exemplo: /home/carlos/Downloads , renome para sonarscanner e agora vamos utilizar esse arquivo, na pasta do projeto você deverá executar o comando abaixo, porém você deverá verificar qual o caminho, onde você descompactou o sonnar scanner. Use o comando pwd para verificar qual o caminho.
+Descompacte o arquivo, por exemplo: /home/carlos/Downloads , renomear sonar-scanner-cli-3.0.3.778-linux  para sonarscanner.
+Utilizaremos esse arquivo, na pasta do projeto e assim, poderemos executar o comando abaixo, porém você deverá verificar qual o caminho, em que descompactou o sonnar scanner. Use o comando pwd para verificar qual o caminho.
 
-**OBS:** É válido lembrar que em projectKey e login, você deverá adicionar suas informações, caso siga o passo a passo do **Analyze a new project** basta copiar e colocar, exceto na parte do sonar-scanner.
+**OBS:** É válido lembrar que em projectKey e login, você deverá adicionar suas informações, caso siga o passo a passo do **Analyze a new project** basta copiar e colocar, exceto na parte do sonar-scanner, caso não tenha adicionado o arquivo com **PATH** bin in linux.
 
 ```
 pwd
@@ -99,7 +101,7 @@ Tendo o caminho você poderá executar o comando da seguinte forma:
 
 ```
 
-/home/rodolfogpeixoto/Downloads/sonar/bin/sonar-scanner \
+/home/rodolfogpeixoto/Downloads/sonarscanner/bin/sonar-scanner \
   -Dsonar.projectKey=codemca \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://localhost:9000 \
